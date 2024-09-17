@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<konferencia>
+    <cim>A Nagy Konferencia</cim>
+    <halllgatok>
+        <hallgato>
+            <nev>Bela</nev>
+            <lakcim>3525, Miskolc Valami utca 10.</lakcim>
+        </hallgato>
+    </halllgatok>
+    <helyszin>3525, Miskolc Valami utca 15.</helyszin>
+    <eloado>
+        <nev>Pityu</nev>
+        <adoszam>01</adoszam>
+        <lakcim>3525, Miskolc Valami utca 20.</lakcim>
+    </eloado>
+    <datum>2025.02.15.</datum>
+</konferencia>
