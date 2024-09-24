@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Szeman_Balazs_orarend>
+    <ora id="01" tipus="eloadas">
+        <targy>Korszeru Informacios Technologiak</targy>
+        <idopont>
+            <nap>Hetfo</nap>
+            <tol>12:00</tol>
+            <ig>14:00</ig>
+        </idopont>
+        <helyszin>Inf/103</helyszin>
+        <oktato>Árvai László Lajos</oktato>
+        <szak>Mernokinformatikus</szak>
+    </ora>
+    <ora id="02" tipus="gyakorlat">
+        <targy>Korszeru Informacios Technologiak</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>16:00</tol>
+            <ig>18:00</ig>
+        </idopont>
+        <helyszin>Inf/15</helyszin>
+        <oktato>Soós Róbert</oktato>
+        <szak>Mernokinformatikus</szak>
+    </ora>
+    <ora id="03" tipus="eloadas">
+        <targy>Oracle Rendszergazda</targy>
+        <idopont>
+            <nap>Hetfo</nap>
+            <tol>08:00</tol>
+            <ig>10:00</ig>
+        </idopont>
+        <helyszin>Inf/103</helyszin>
+        <oktato>Dr. Kovács László József</oktato>
+        <szak>Mernokinformatikus</szak>
+    </ora>
+    <ora id="04" tipus="gyakorlat">
+        <targy>Oracle Rendszergazda</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>13:00</tol>
+            <ig>15:00</ig>
+        </idopont>
+        <helyszin>Inf/202</helyszin>
+        <oktato>Szűcs Miklós</oktato>
+        <szak>Mernokinformatikus</szak>
+    </ora>
+    <ora id="05" tipus="eloadas">
+        <targy>Adatkezeles XML-ben</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>10:00</tol>
+            <ig>12:00</ig>
+        </idopont>
+        <helyszin>Inf/103</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>Mernokinformatikus</szak>
+    </ora>
+    <ora id="06" tipus="gyakorlat">
+        <targy>Adatkezeles XML-ben</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>12:00</tol>
+            <ig>14:00</ig>
+        </idopont>
+        <helyszin>Inf/103</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>Mernokinformatikus</szak>
+    </ora>
+</Szeman_Balazs_orarend>
