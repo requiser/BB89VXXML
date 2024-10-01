@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BB89VX_kurzusfelvetel tanev="2024/25 I. félév" egyetem="Egyetem Neve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BB89VX_kurzusfelvetel.xsd">
+    <hallgato>
+        <hnev>Szabó Péter</hnev>
+        <szulev>2002</szulev>
+        <szak evf="3">Mérnökinformatikus</szak>
+    </hallgato>
+
+    <kurzusok>
+        <kurzus id="ABC123">
+            <kurzusnev>Adatbázis-kezelés</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf/204</hely>
+            <idopont>
+                <nap>Hétfő</nap>
+                <tol>10:00</tol>
+                <ig>12:00</ig>
+            </idopont>
+            <oktato>Dr. Kovács László</oktato>
+        </kurzus>
+
+        <kurzus id="DEF456" jovahagyas="igen" nyelv="magyar">
+            <kurzusnev>Programozás I.</kurzusnev>
+            <kredit>6</kredit>
+            <hely>Inf/101</hely>
+            <idopont>
+                <nap>Kedd</nap>
+                <tol>12:00</tol>
+                <ig>14:00</ig>
+            </idopont>
+            <oktato>Dr. Nagy Éva</oktato>
+        </kurzus>
+
+        <kurzus id="GHI789">
+            <kurzusnev>Hálózati technológiák</kurzusnev>
+            <kredit>4</kredit>
+            <hely>Inf/202</hely>
+            <idopont>
+                <nap>Szerda</nap>
+                <tol>8:00</tol>
+                <ig>10:00</ig>
+            </idopont>
+            <oraado>Dr. Kiss Béla</oraado>
+        </kurzus>
+
+        <kurzus id="JKL101" jovahagyas="igen" nyelv="angol">
+            <kurzusnev>Szoftverfejlesztés</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf/305</hely>
+            <idopont>
+                <nap>Csütörtök</nap>
+                <tol>14:00</tol>
+                <ig>16:00</ig>
+            </idopont>
+            <oktato>Dr. Horváth Márk</oktato>
+        </kurzus>
+
+        <kurzus id="MNO112">
+            <kurzusnev>Algoritmusok és Adatszerkezetek</kurzusnev>
+            <kredit>6</kredit>
+            <hely>Inf/203</hely>
+            <idopont>
+                <nap>Péntek</nap>
+                <tol>10:00</tol>
+                <ig>12:00</ig>
+            </idopont>
+            <oraado>Dr. Balogh Anna</oraado>
+        </kurzus>
+    </kurzusok>
+</BB89VX_kurzusfelvetel>

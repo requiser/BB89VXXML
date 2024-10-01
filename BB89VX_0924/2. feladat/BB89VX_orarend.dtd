@@ -5,9 +5,9 @@
                 tipus (eloadas | gyakorlat) #REQUIRED>
         <!ELEMENT targy (#PCDATA)>
         <!ELEMENT idopont (nap, tol, ig)>
-        <!ELEMENT nap (#PCDATA)>
-        <!ELEMENT tol (#PCDATA)>
-        <!ELEMENT ig (#PCDATA)>
+            <!ELEMENT nap (#PCDATA)>
+            <!ELEMENT tol (#PCDATA)>
+            <!ELEMENT ig (#PCDATA)>
         <!ELEMENT helyszin (#PCDATA)>
         <!ELEMENT oktato (#PCDATA)>
         <!ELEMENT szak (#PCDATA)>

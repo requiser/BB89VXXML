@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE Szeman_Balazs_orarend[
-        <!ELEMENT Szeman_Balazs_orarend (ora+)>
-        <!ELEMENT ora (targy, idopont, helyszin, oktato, szak)>
-        <!ATTLIST ora
-            id ID #REQUIRED
-            tipus (eloadas | gyakorlat) #REQUIRED>
-        <!ELEMENT targy (#PCDATA)>
-        <!ELEMENT idopont (nap, tol, ig)>
-            <!ELEMENT nap (#PCDATA)>
-            <!ELEMENT tol (#PCDATA)>
-            <!ELEMENT ig (#PCDATA)>
-        <!ELEMENT helyszin (#PCDATA)>
-        <!ELEMENT oktato (#PCDATA)>
-        <!ELEMENT szak (#PCDATA)>
-        ]>
 
-<Szeman_Balazs_orarend>
-    <ora id="id_01" tipus="eloadas">
+<Szeman_Balazs_orarend xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BB89VX_orarend1.xsd">
+    <ora id="01" tipus="eloadas">
         <targy>Korszeru Informacios Technologiak</targy>
         <idopont>
             <nap>Hetfo</nap>
@@ -27,7 +12,7 @@
         <oktato>Árvai László Lajos</oktato>
         <szak>Mernokinformatikus</szak>
     </ora>
-    <ora id="id_02" tipus="gyakorlat">
+    <ora id="02" tipus="gyakorlat">
         <targy>Korszeru Informacios Technologiak</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -38,7 +23,7 @@
         <oktato>Soós Róbert</oktato>
         <szak>Mernokinformatikus</szak>
     </ora>
-    <ora id="id_03" tipus="eloadas">
+    <ora id="03" tipus="eloadas">
         <targy>Oracle Rendszergazda</targy>
         <idopont>
             <nap>Hetfo</nap>
@@ -49,7 +34,7 @@
         <oktato>Dr. Kovács László József</oktato>
         <szak>Mernokinformatikus</szak>
     </ora>
-    <ora id="id_04" tipus="gyakorlat">
+    <ora id="04" tipus="gyakorlat">
         <targy>Oracle Rendszergazda</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -60,7 +45,7 @@
         <oktato>Szűcs Miklós</oktato>
         <szak>Mernokinformatikus</szak>
     </ora>
-    <ora id="id_05" tipus="eloadas">
+    <ora id="05" tipus="eloadas">
         <targy>Adatkezeles XML-ben</targy>
         <idopont>
             <nap>Kedd</nap>
@@ -71,7 +56,7 @@
         <oktato>Dr. Bednarik László</oktato>
         <szak>Mernokinformatikus</szak>
     </ora>
-    <ora id="id_06" tipus="gyakorlat">
+    <ora id="06" tipus="gyakorlat">
         <targy>Adatkezeles XML-ben</targy>
         <idopont>
             <nap>Kedd</nap>
