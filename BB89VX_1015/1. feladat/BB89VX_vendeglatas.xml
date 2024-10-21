@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vendeglatas>
+    <!-- Ettermek-->
+    <etterem ekod="e1">
+        <nev>Trófea</nev>
+        <cim>
+            <varos>Budapest</varos>
+            <utca>Jóska</utca>
+            <hazszam>15</hazszam>
+        </cim>
+        <csillag>4</csillag>
+    </etterem>
+
+
+    <!-- Főszakácsok-->
+     <foszakacs Fkod="f1">
+
+     </foszakacs>
+
+    <!-- Szakácsok-->
+     <szakacs Szkod="sz1">
+
+     </szakacs>
+
+    <!-- Gyakornokok-->
+     <gyakornok Gykod="gy1">
+
+     </gyakornok>
+
+    <!-- Vendégek-->
+     <vendeg vkod="v1">
+
+     </vendeg>
+
+    <!-- Rendelések-->
+     <rendeles>
+
+     </rendeles>
+
+</vendeglatas>

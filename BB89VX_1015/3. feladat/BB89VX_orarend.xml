@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<Szeman_Balazs_orarend xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BB89VX_orarend.xsd">
+<Szeman_Balazs_orarend xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BB89VX_orarend1.xsd">
     <ora id="01" tipus="eloadas">
         <targy>Korszeru Informacios Technologiak</targy>
         <idopont>

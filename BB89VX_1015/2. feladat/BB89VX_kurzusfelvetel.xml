@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BB89VX_kurzusfelvetel tanev="2024/25 I. félév" egyetem="Egyetem Neve" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BB89VX_kurzusfelvetel.xsd">
+<kurzusfelvetel tanev="2024/25_1" egyetem="ME" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BB89VX_kurzusfelvetel.xsd">
     <hallgato>
         <hnev>Szabó Péter</hnev>
         <szulev>2002</szulev>
@@ -67,4 +67,4 @@
             <oraado>Dr. Balogh Anna</oraado>
         </kurzus>
     </kurzusok>
-</BB89VX_kurzusfelvetel>
+</kurzusfelvetel>
