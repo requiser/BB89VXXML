@@ -49,15 +49,8 @@ public class DOMWrite {
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
 
-            transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-            transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
-            transformer.setOutputProperty(OutputKeys.METHOD, "xml");
-            transformer.setOutputProperty("{http://xml.apache.org/xalan}indent-amount", "2");
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-
-            transformer.setOutputProperty("{http://xml.apache.org/xalan}line-separator", "\n");
-            transformer.setOutputProperty(OutputKeys.DOCTYPE_PUBLIC, "yes");
 
             StreamResult result = new StreamResult(new File("BB89VX_1022/DomParseBB89VX/src/domBB89VX1022/hallgato1BB89VX.xml"));
             transformer.transform(source, result);
