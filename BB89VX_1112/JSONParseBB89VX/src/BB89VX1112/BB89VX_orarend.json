@@ -1,0 +1,85 @@
+{
+  "Szeman_Balazs_orarend": {
+    "ora": [
+      {
+        "id": "01",
+        "tipus": "eloadas",
+        "targy": "Korszeru Informacios Technologiak",
+        "idopont": {
+          "nap": "Hetfo",
+          "tol": "12:00",
+          "ig": "14:00"
+        },
+        "helyszin": "Inf/103",
+        "oktato": "Árvai László Lajos",
+        "szak": "Mernokinformatikus"
+      },
+      {
+        "id": "02",
+        "tipus": "gyakorlat",
+        "targy": "Korszeru Informacios Technologiak",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "16:00",
+          "ig": "18:00"
+        },
+        "helyszin": "Inf/15",
+        "oktato": "Soós Róbert",
+        "szak": "Mernokinformatikus"
+      },
+      {
+        "id": "03",
+        "tipus": "eloadas",
+        "targy": "Oracle Rendszergazda",
+        "idopont": {
+          "nap": "Hetfo",
+          "tol": "08:00",
+          "ig": "10:00"
+        },
+        "helyszin": "Inf/103",
+        "oktato": "Dr. Kovács László József",
+        "szak": "Mernokinformatikus"
+      },
+      {
+        "id": "04",
+        "tipus": "gyakorlat",
+        "targy": "Oracle Rendszergazda",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "13:00",
+          "ig": "15:00"
+        },
+        "helyszin": "Inf/202",
+        "oktato": "Szűcs Miklós",
+        "szak": "Mernokinformatikus"
+      },
+      {
+        "id": "05",
+        "tipus": "eloadas",
+        "targy": "Adatkezeles XML-ben",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "10:00",
+          "ig": "12:00"
+        },
+        "helyszin": "Inf/103",
+        "oktato": "Dr. Bednarik László",
+        "szak": "Mernokinformatikus"
+      },
+      {
+        "id": "06",
+        "tipus": "gyakorlat",
+        "targy": "Adatkezeles XML-ben",
+        "idopont": {
+          "nap": "Kedd",
+          "tol": "12:00",
+          "ig": "14:00"
+        },
+        "helyszin": "Inf/103",
+        "oktato": "Dr. Bednarik László",
+        "szak": "Mernokinformatikus",
+        "oraado": "Dr. Bednarik László"
+      }
+    ]
+  }
+}

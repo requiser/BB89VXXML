@@ -1,0 +1,85 @@
+{
+  "Szeman_Balazs_orarend": {
+    "ora": [
+      {
+        "targy": "Korszeru Informacios Technologiak",
+        "oktato": "Árvai László Lajos",
+        "szak": "Mernokinformatikus",
+        "idopont": {
+          "tol": "12:00",
+          "nap": "Hetfo",
+          "ig": "14:00"
+        },
+        "id": "01",
+        "helyszin": "Inf/103",
+        "tipus": "eloadas"
+      },
+      {
+        "targy": "Korszeru Informacios Technologiak",
+        "oktato": "Soós Róbert",
+        "szak": "Mernokinformatikus",
+        "idopont": {
+          "tol": "16:00",
+          "nap": "Kedd",
+          "ig": "18:00"
+        },
+        "id": "02",
+        "helyszin": "Inf/15",
+        "tipus": "gyakorlat"
+      },
+      {
+        "targy": "Oracle Rendszergazda",
+        "oktato": "Dr. Kovács László József",
+        "szak": "Mernokinformatikus",
+        "idopont": {
+          "tol": "08:00",
+          "nap": "Hetfo",
+          "ig": "10:00"
+        },
+        "id": "03",
+        "helyszin": "Inf/103",
+        "tipus": "eloadas"
+      },
+      {
+        "targy": "Oracle Rendszergazda",
+        "oktato": "Szűcs Miklós",
+        "szak": "Mernokinformatikus",
+        "idopont": {
+          "tol": "13:00",
+          "nap": "Kedd",
+          "ig": "15:00"
+        },
+        "id": "04",
+        "helyszin": "Inf/202",
+        "tipus": "gyakorlat"
+      },
+      {
+        "targy": "Adatkezeles XML-ben",
+        "oktato": "Dr. Bednarik László",
+        "szak": "Mernokinformatikus",
+        "idopont": {
+          "tol": "10:00",
+          "nap": "Kedd",
+          "ig": "12:00"
+        },
+        "id": "05",
+        "helyszin": "Inf/103",
+        "tipus": "eloadas"
+      },
+      {
+        "oraado": "Dr. Bednarik László",
+        "targy": "Adatkezeles XML-ben",
+        "oktato": "Dr. Bednarik László",
+        "szak": "Mernokinformatikus",
+        "idopont": {
+          "tol": "12:00",
+          "nap": "Kedd",
+          "ig": "14:00"
+        },
+        "id": "06",
+        "helyszin": "Inf/103",
+        "tipus": "gyakorlat"
+      }
+    ]
+  }
+}
