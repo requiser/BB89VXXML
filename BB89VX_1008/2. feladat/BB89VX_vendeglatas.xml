@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Vendeglatas>
+    <Ettermek>
+        <Etterem Ekod="E001">
+            <Nev>Gourmet Paradise</Nev>
+            <Cim>
+                <Varos>Budapest</Varos>
+                <Utca>Kossuth Lajos utca</Utca>
+                <Hazszam>45</Hazszam>
+            </Cim>
+            <Csillag>5</Csillag>
+        </Etterem>
+        <Etterem Ekod="E002">
+            <Nev>Cozy Corner</Nev>
+            <Cim>
+                <Varos>Szeged</Varos>
+                <Utca>Petőfi Sándor utca</Utca>
+                <Hazszam>12</Hazszam>
+            </Cim>
+            <Csillag>4</Csillag>
+        </Etterem>
+    </Ettermek>
+    <Foszakacsok>
+        <Foszakacs Ef="F001">
+            <Nev>Péter Horváth</Nev>
+            <Vegzettseg>Chef Diploma</Vegzettseg>
+            <Eletkor>45</Eletkor>
+        </Foszakacs>
+        <Foszakacs Ef="F002">
+            <Nev>Katalin Nagy</Nev>
+            <Vegzettseg>Master Chef</Vegzettseg>
+            <Eletkor>38</Eletkor>
+        </Foszakacs>
+    </Foszakacsok>
+    <Szakacsok>
+        <Szakacs Szkod="S001" Esz="R001">
+            <Nev>András Kovács</Nev>
+            <Vegzettseg>Culinary Certificate</Vegzettseg>
+            <Reszleg>Main Course</Reszleg>
+        </Szakacs>
+        <Szakacs Szkod="S002" Esz="R002">
+            <Nev>Zsófia Tóth</Nev>
+            <Vegzettseg>Baking Specialist</Vegzettseg>
+            <Reszleg>Desserts</Reszleg>
+        </Szakacs>
+    </Szakacsok>
+    <Gyakornokok>
+        <Gyakornok Gykod="G001" Egy="E001">
+            <Nev>Márton Varga</Nev>
+            <Muszak>Morning</Muszak>
+            <Gyakorlat>
+                <Kezdete>2024-01-15</Kezdete>
+                <Idotartama>3 months</Idotartama>
+            </Gyakorlat>
+        </Gyakornok>
+        <Gyakornok Gykod="G002" Egy="E002">
+            <Nev>Anna Kiss</Nev>
+            <Muszak>Afternoon</Muszak>
+            <Gyakorlat>
+                <Kezdete>2024-02-01</Kezdete>
+                <Idotartama>4 months</Idotartama>
+            </Gyakorlat>
+        </Gyakornok>
+    </Gyakornokok>
+    <Vendegek>
+        <Vendeg Vkod="V001">
+            <Nev>János Szabó</Nev>
+            <Cim>
+                <Varos>Debrecen</Varos>
+                <Utca>Nagyerdei körút</Utca>
+                <Hazszam>20</Hazszam>
+            </Cim>
+            <Eletkor>34</Eletkor>
+        </Vendeg>
+        <Vendeg Vkod="V002">
+            <Nev>Erika Balogh</Nev>
+            <Cim>
+                <Varos>Pécs</Varos>
+                <Utca>Király utca</Utca>
+                <Hazszam>15</Hazszam>
+            </Cim>
+            <Eletkor>29</Eletkor>
+        </Vendeg>
+    </Vendegek>
+    <Rendelesek>
+        <Rendeles>
+            <Osszeg>8500</Osszeg>
+            <Etel>Chicken Paprikash</Etel>
+        </Rendeles>
+        <Rendeles>
+            <Osszeg>3200</Osszeg>
+            <Etel>Dobos Torte</Etel>
+        </Rendeles>
+    </Rendelesek>
+</Vendeglatas>
