@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="studentBB89VX.xsd">
+    <student id="ST01">
+        <keresztnev>Anna</keresztnev>
+        <vezeteknev>Kovács</vezeteknev>
+        <becenev>Annus</becenev>
+        <kor>21</kor>
+    </student>
+    <student id="ST02">
+        <keresztnev>Bálint</keresztnev>
+        <vezeteknev>Nagy</vezeteknev>
+        <becenev>Balu</becenev>
+        <kor>22</kor>
+    </student>
+    <student id="ST03">
+        <keresztnev>Cecília</keresztnev>
+        <vezeteknev>Szabó</vezeteknev>
+        <becenev>Cili</becenev>
+        <kor>23</kor>
+    </student>
+</class>
