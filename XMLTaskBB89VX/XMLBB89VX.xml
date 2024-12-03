@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<allatmenhelyek xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaBB89VX.xsd">
+  <varosok>
+    <varos iranyitoszam="4000,4001,4002,4003,4004,4005,4006,4007,4008,4009,4010,4011,4012,4013,4014,4015,4016,4017,4018,4019,4020,4021,4022,4023,4024,4025,4026,4027,4028,4029,4030,4031,4032,4063">
+      <nev>Debrecen</nev>
+      <terulet>461</terulet>
+      <lakossag>201704</lakossag>
+    </varos>
+    <varos iranyitoszam="3300,3304">
+      <nev>Eger</nev>
+      <terulet>92</terulet>
+      <lakossag>49499</lakossag>
+    </varos>
+    <varos iranyitoszam="3500,3501,3502,3503,3504,3505,3506,3507,3508,3509,3510,3511,3512,3513,3514,3515,3516,3517,3518,3519,3520,3521,3522,3523,3524,3525,3526,3527,3528,3529,3530,3531,3532,3533,3534,3535">
+      <nev>Miskolc</nev>
+      <terulet>236</terulet>
+      <lakossag>143502</lakossag>
+    </varos>
+  </varosok>
+  <dolgozok>
+    <dolgozo szemelyi_szam="123456EE">
+      <beosztas>Gondozó</beosztas>
+      <nev>Kiss Béla</nev>
+      <nem>Férfi</nem>
+      <edesanyja_leanykori_neve>Dobó Beáta</edesanyja_leanykori_neve>
+      <lakhely iranyitoszam="3515">
+        <utca>Kossuth utca</utca>
+        <hazszam>11</hazszam>
+      </lakhely>
+      <telefonszam>06301234567</telefonszam>
+    </dolgozo>
+    <dolgozo szemelyi_szam="234567RR">
+      <beosztas>Állatorvos</beosztas>
+      <nev>Nagy Béla</nev>
+      <nem>Férfi</nem>
+      <edesanyja_leanykori_neve>Kiss Margit</edesanyja_leanykori_neve>
+      <lakhely iranyitoszam="3525">
+        <utca>Petőfi utca</utca>
+        <hazszam>12</hazszam>
+      </lakhely>
+      <telefonszam>06701234567</telefonszam>
+    </dolgozo>
+    <dolgozo szemelyi_szam="345678TT">
+      <beosztas>Menedzser</beosztas>
+      <nev>Lakatos Gizella</nev>
+      <nem>Nő</nem>
+      <edesanyja_leanykori_neve>Tóth Éva</edesanyja_leanykori_neve>
+      <lakhely iranyitoszam="3515">
+        <utca>Hunyadi utca</utca>
+        <hazszam>1</hazszam>
+      </lakhely>
+      <telefonszam>06601234567</telefonszam>
+    </dolgozo>
+  </dolgozok>
+  <allatok>
+    <allat azonosito_kod="00001">
+      <nev>Foltos</nev>
+      <eletkor>1</eletkor>
+      <faj>Kutya</faj>
+    </allat>
+    <allat azonosito_kod="00002">
+      <nev>Cirmi</nev>
+      <eletkor>3</eletkor>
+      <faj>Macska</faj>
+    </allat>
+    <allat azonosito_kod="00003">
+      <nev>Tappancs</nev>
+      <eletkor>4 év</eletkor>
+      <faj>Nyúl</faj>
+    </allat>
+  </allatok>
+  <menhelyek>
+    <menhely nyilvantartasi_azonosito="718293002">
+      <nev>Miskolci Állatsegítő Alapítvány</nev>
+      <ferohely>300</ferohely>
+      <telefonszam>06701234501</telefonszam>
+      <cim iranyitoszam="3529">
+        <utca>Sajószigeti út</utca>
+        <hazszam>23</hazszam>
+      </cim>
+    </menhely>
+    <menhely nyilvantartasi_azonosito="553242112">
+      <nev>Ebrendészeti Telep</nev>
+      <ferohely>400</ferohely>
+      <telefonszam>06701234502</telefonszam>
+      <cim iranyitoszam="4002">
+        <utca>Bánk</utca>
+        <hazszam>72</hazszam>
+      </cim>
+    </menhely>
+    <menhely nyilvantartasi_azonosito="620903992">
+      <nev>Állatokat Védjük Együtt Alapítvány</nev>
+      <ferohely>200</ferohely>
+      <telefonszam>06701234503</telefonszam>
+      <cim iranyitoszam="3300">
+        <utca>Külterület</utca>
+        <hazszam>1</hazszam>
+      </cim>
+    </menhely>
+  </menhelyek>
+  <betegsegek>
+    <betegseg latin_nev="influenza_felis">
+      <nev>Macska Influenza</nev>
+      <gyogymod>Antibiotikumos kezelés</gyogymod>
+      <gyogyulasi_ido>7</gyogyulasi_ido>
+      <tuntetek>orrfolyás, tüsszögés</tuntetek>
+    </betegseg>
+    <betegseg latin_nev="canis_parvovirus">
+      <nev>Parvovírus</nev>
+      <gyogymod>Intravenás folyadékpótlás</gyogymod>
+      <gyogyulasi_ido>6</gyogyulasi_ido>
+      <tuntetek>hasmenés, hányás</tuntetek>
+    </betegseg>
+    <betegseg latin_nev="feline_infectious_peritonitis">
+      <nev>Fertőző hashártyagyulladás(FIP)</nev>
+      <gyogymod>Antibiotikumos kezelés</gyogymod>
+      <gyogyulasi_ido>16</gyogyulasi_ido>
+      <tuntetek>láz, levertség, fogyás, étvágytalanság</tuntetek>
+    </betegseg>
+    <betegseg latin_nev="myxomatosis">
+      <nev>Myxomatosis</nev>
+      <gyogymod>Védőoltás</gyogymod>
+      <gyogyulasi_ido>14</gyogyulasi_ido>
+      <tuntetek>bőr duzzanatok, étvágytalanság</tuntetek>
+    </betegseg>
+  </betegsegek>
+  <orokbefogadok>
+    <orokbefogado szemelyi_szam="987654AB">
+      <nev>Horváth János</nev>
+      <szul_ido>1992.11.02.</szul_ido>
+      <telefonszam>06201234567</telefonszam>
+      <lakhely iranyitoszam="3515">
+        <utca>Béke utca</utca>
+        <hazszam>5</hazszam>
+      </lakhely>
+    </orokbefogado>
+    <orokbefogado szemelyi_szam="876543CD">
+      <nev>Kovács Anna</nev>
+      <szul_ido>1999.09.09.</szul_ido>
+	  <telefonszam>06201234568</telefonszam>
+	  <lakhely iranyitoszam="4001">
+		  <utca>Tavasz utca</utca>
+		  <hazszam>8</hazszam>
+	  </lakhely>
+	</orokbefogado>
+	<orokbefogado szemelyi_szam="876543EF">
+		<nev>Horváth Eszter</nev>
+		<szul_ido>1990.12.01.</szul_ido>
+		<telefonszam>06201234569</telefonszam>
+		<lakhely iranyitoszam="3300">
+			<utca>Nyár utca</utca>
+			<hazszam>13</hazszam>
+		</lakhely>
+	</orokbefogado>
+  </orokbefogadok>
+</allatmenhelyek>

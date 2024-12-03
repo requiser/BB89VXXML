@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Gyökér -->
+    <xs:element name="allatmenhelyek">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="varosok" type="VarosokTipus"/>
+                <xs:element name="dolgozok" type="DolgozokTipus"/>
+                <xs:element name="allatok" type="AllatokTipus"/>
+                <xs:element name="menhelyek" type="MenhelyekTipus"/>
+                <xs:element name="betegsegek" type="BetegsegekTipus"/>
+                <xs:element name="orokbefogadok" type="OrokbefogadokTipus"/>
+            </xs:sequence>
+        </xs:complexType>
+
+        <!-- Kulcsok -->
+        <xs:key name="varosKulcs">
+            <xs:selector xpath="varosok/varos"/>
+            <xs:field xpath="@iranyitoszam"/>
+        </xs:key>
+
+        <xs:key name="menhelyKulcs">
+            <xs:selector xpath="menhelyek/menhely"/>
+            <xs:field xpath="@nyilvantartasi_azonosito"/>
+        </xs:key>
+
+        <xs:key name="dolgozoKulcs">
+            <xs:selector xpath="dolgozok/dolgozo"/>
+            <xs:field xpath="@szemelyi_szam"/>
+        </xs:key>
+
+        <xs:key name="orokbefogadoKulcs">
+            <xs:selector xpath="orokbefogadok/orokbefogado"/>
+            <xs:field xpath="@szemelyi_szam"/>
+        </xs:key>
+    </xs:element>
+
+    <!-- Telefonszám típus -->
+    <xs:simpleType name="TelefonszamTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="06[237]0[0-9]{7}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Irányítószám típus -->
+    <xs:simpleType name="IranyitoszamTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Nem típus -->
+    <xs:simpleType name="NemTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Férfi"/>
+            <xs:enumeration value="Nő"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Faj típus -->
+    <xs:simpleType name="FajTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Kutya"/>
+            <xs:enumeration value="Macska"/>
+            <xs:enumeration value="Nyúl"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Címek típusa -->
+    <xs:complexType name="CimTipus">
+        <xs:sequence>
+            <xs:element name="utca" type="xs:string"/>
+            <xs:element name="hazszam" type="xs:positiveInteger"/>
+        </xs:sequence>
+        <xs:attribute name="iranyitoszam" type="IranyitoszamTipus" use="required"/>
+    </xs:complexType>
+
+    <!-- Városok típusa -->
+    <xs:complexType name="VarosokTipus">
+        <xs:sequence>
+            <xs:element name="varos" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nev" type="xs:string"/>
+                        <xs:element name="terulet" type="xs:float"/>
+                        <xs:element name="lakossag" type="xs:positiveInteger"/>
+                    </xs:sequence>
+                    <xs:attribute name="iranyitoszam" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Dolgozók típusa -->
+    <xs:complexType name="DolgozokTipus">
+        <xs:sequence>
+            <xs:element name="dolgozo" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="beosztas" type="xs:string"/>
+                        <xs:element name="nev" type="xs:string"/>
+                        <xs:element name="nem" type="NemTipus"/>
+                        <xs:element name="edesanyja_leanykori_neve" type="xs:string"/>
+                        <xs:element name="lakhely" type="CimTipus"/>
+                        <xs:element name="telefonszam" type="TelefonszamTipus"/>
+                    </xs:sequence>
+                    <xs:attribute name="szemelyi_szam" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Állatok típusa -->
+    <xs:complexType name="AllatokTipus">
+        <xs:sequence>
+            <xs:element name="allat" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nev" type="xs:string"/>
+                        <xs:element name="eletkor" type="xs:string"/>
+                        <xs:element name="faj" type="FajTipus"/>
+                    </xs:sequence>
+                    <xs:attribute name="azonosito_kod" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Menhelyek típusa -->
+    <xs:complexType name="MenhelyekTipus">
+        <xs:sequence>
+            <xs:element name="menhely" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nev" type="xs:string"/>
+                        <xs:element name="ferohely" type="xs:positiveInteger"/>
+                        <xs:element name="telefonszam" type="TelefonszamTipus"/>
+                        <xs:element name="cim" type="CimTipus"/>
+                    </xs:sequence>
+                    <xs:attribute name="nyilvantartasi_azonosito" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Betegségek típusa -->
+    <xs:complexType name="BetegsegekTipus">
+        <xs:sequence>
+            <xs:element name="betegseg" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nev" type="xs:string"/>
+                        <xs:element name="gyogymod" type="xs:string"/>
+                        <xs:element name="gyogyulasi_ido" type="xs:positiveInteger"/>
+                        <xs:element name="tuntetek" type="xs:string"/>
+                    </xs:sequence>
+                    <xs:attribute name="latin_nev" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Örökbefogadók típusa -->
+    <xs:complexType name="OrokbefogadokTipus">
+        <xs:sequence>
+            <xs:element name="orokbefogado" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nev" type="xs:string"/>
+                        <xs:element name="szul_ido" type="xs:string"/>
+                        <xs:element name="telefonszam" type="TelefonszamTipus"/>
+                        <xs:element name="lakhely" type="CimTipus"/>
+                    </xs:sequence>
+                    <xs:attribute name="szemelyi_szam" type="xs:string" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Idegen kulcs kapcsolatok -->
+    <xs:keyref name="dolgozoLakhelyRef" refer="varosKulcs">
+        <xs:selector xpath="dolgozok/dolgozo/lakhely"/>
+        <xs:field xpath="@iranyitoszam"/>
+    </xs:keyref>
+
+    <xs:keyref name="menhelyVarosRef" refer="varosKulcs">
+        <xs:selector xpath="menhelyek/menhely/cim"/>
+        <xs:field xpath="@iranyitoszam"/>
+    </xs:keyref>
+
+    <xs:keyref name="orokbefogadoLakhelyRef" refer="varosKulcs">
+        <xs:selector xpath="orokbefogadok/orokbefogado/lakhely"/>
+        <xs:field xpath="@iranyitoszam"/>
+    </xs:keyref>
+</xs:schema>
