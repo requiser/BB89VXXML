@@ -3,6 +3,7 @@ package hu.domparse.BB89VX;
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
 import java.io.*;
+import java.util.Objects;
 
 public class DOMQueryBB89VX {
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class DOMQueryBB89VX {
             DocumentBuilder builder = factory.newDocumentBuilder();
 
             // XML fájl beolvasása
-            Document doc = builder.parse("XMLBB89VX.xml");
+            Document doc = builder.parse("XMLTaskBB89VX/XMLBB89VX.xml");
 
             // XML struktúra normalizálása
             doc.getDocumentElement().normalize();
@@ -20,18 +21,48 @@ public class DOMQueryBB89VX {
             // 1. Lekérdezés: Miskolcon élő dolgozók listázása
             System.out.println("1. Miskolcon élő dolgozók:");
             System.out.println("---------------------------");
-            NodeList dolgozok = doc.getElementsByTagName("dolgozo");
-            for (int i = 0; i < dolgozok.getLength(); i++) {
-                Element dolgozo = (Element) dolgozok.item(i);
-                Element lakhely = (Element) dolgozo.getElementsByTagName("lakhely").item(0);
-                String iranyitoszam = lakhely.getAttribute("iranyitoszam");
-                // Miskolc irányítószámai 3500-3599 között
-                if (iranyitoszam.startsWith("35")) {
-                    String nev = dolgozo.getElementsByTagName("nev").item(0).getTextContent();
-                    String beosztas = dolgozo.getElementsByTagName("beosztas").item(0).getTextContent();
-                    System.out.println("Név: " + nev + ", Beosztás: " + beosztas);
+
+            NodeList varosok = doc.getElementsByTagName("varos");
+            String keresettvaros = "Miskolc";
+            String keresettirszam = "";
+
+            // Keresett város irányítószámának megkeresése
+            for (int i = 0; i < varosok.getLength(); i++) {
+                Element varos = (Element) varosok.item(i);
+                Node nevNode = varos.getElementsByTagName("nev").item(0);
+                if (nevNode != null && Objects.equals(nevNode.getTextContent(), keresettvaros)) {
+                    keresettirszam = varos.getAttribute("iranyitoszam");
+                    break;
                 }
             }
+
+            if (!keresettirszam.isEmpty()) {
+                NodeList dolgozok = doc.getElementsByTagName("dolgozo");
+
+                for (int i = 0; i < dolgozok.getLength(); i++) {
+                    Element dolgozo = (Element) dolgozok.item(i);
+                    Node lakhelyNode = dolgozo.getElementsByTagName("lakhely").item(0);
+
+                    if (lakhelyNode instanceof Element) {
+                        Element lakhely = (Element) lakhelyNode;
+                        String iranyitoszam = lakhely.getAttribute("iranyitoszam");
+
+                        if (Objects.equals(iranyitoszam, keresettirszam)) {
+                            Node nevNode = dolgozo.getElementsByTagName("nev").item(0);
+                            Node beosztasNode = dolgozo.getElementsByTagName("beosztas").item(0);
+
+                            if (nevNode != null && beosztasNode != null) {
+                                String nev = nevNode.getTextContent();
+                                String beosztas = beosztasNode.getTextContent();
+                                System.out.println("Név: " + nev + ", Beosztás: " + beosztas);
+                            }
+                        }
+                    }
+                }
+            } else {
+                System.out.println("Nem található a keresett Város a xml-ben.");
+            }
+
 
             // 2. Lekérdezés: 300 férőhelynél nagyobb menhelyek
             System.out.println("\n2. 300 férőhelynél nagyobb menhelyek:");

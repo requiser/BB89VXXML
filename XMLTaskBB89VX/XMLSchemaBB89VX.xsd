@@ -33,6 +33,12 @@
             <xs:selector xpath="orokbefogadok/orokbefogado"/>
             <xs:field xpath="@szemelyi_szam"/>
         </xs:key>
+
+        <xs:key name="betegsegKulcs">
+            <xs:selector xpath="betegsegek/betegseg"/>
+            <xs:field xpath="@latin_nev"/>
+        </xs:key>
+
     </xs:element>
 
     <!-- Telefonszám típus -->
@@ -85,7 +91,7 @@
                         <xs:element name="terulet" type="xs:float"/>
                         <xs:element name="lakossag" type="xs:positiveInteger"/>
                     </xs:sequence>
-                    <xs:attribute name="iranyitoszam" type="xs:string" use="required"/>
+                    <xs:attribute name="iranyitoszam" type="IranyitoszamTipus" use="required"/>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
@@ -106,6 +112,16 @@
                     </xs:sequence>
                     <xs:attribute name="szemelyi_szam" type="xs:string" use="required"/>
                 </xs:complexType>
+
+                <xs:keyref name="dolgozoLakhelyRef" refer="varosKulcs">
+                    <xs:selector xpath="dolgozok/dolgozo/lakhely"/>
+                    <xs:field xpath="@iranyitoszam"/>
+                </xs:keyref>
+
+                <xs:keyref name="dolgozoKulcsref" refer="dolgozoKulcs">
+                    <xs:selector xpath="dolgozok/dolgozo"/>
+                    <xs:field xpath="@szemelyi_szam"/>
+                </xs:keyref>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
@@ -139,6 +155,16 @@
                     </xs:sequence>
                     <xs:attribute name="nyilvantartasi_azonosito" type="xs:string" use="required"/>
                 </xs:complexType>
+
+                <xs:keyref name="menhelyVarosRef" refer="varosKulcs">
+                    <xs:selector xpath="menhelyek/menhely/cim"/>
+                    <xs:field xpath="@iranyitoszam"/>
+                </xs:keyref>
+
+                <xs:keyref name="menhelyKulcsref" refer="menhelyKulcs">
+                    <xs:selector xpath="menhelyek/menhely"/>
+                    <xs:field xpath="@nyilvantartasi_azonosito"/>
+                </xs:keyref>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
@@ -156,6 +182,10 @@
                     </xs:sequence>
                     <xs:attribute name="latin_nev" type="xs:string" use="required"/>
                 </xs:complexType>
+                <xs:keyref name="betegsegKulcsref" refer="betegsegKulcs">
+                    <xs:selector xpath="betegsegek/betegseg"/>
+                    <xs:field xpath="@latin_nev"/>
+                </xs:keyref>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
@@ -173,23 +203,18 @@
                     </xs:sequence>
                     <xs:attribute name="szemelyi_szam" type="xs:string" use="required"/>
                 </xs:complexType>
+
+                <xs:keyref name="orokbefogadoLakhelyRef" refer="varosKulcs">
+                    <xs:selector xpath="orokbefogadok/orokbefogado/lakhely"/>
+                    <xs:field xpath="@iranyitoszam"/>
+                </xs:keyref>
+
+                <xs:keyref name="orokbefogadoKulcsref" refer="orokbefogadoKulcs">
+                    <xs:selector xpath="orokbefogadok/orokbefogado"/>
+                    <xs:field xpath="@szemelyi_szam"/>
+                </xs:keyref>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
 
-    <!-- Idegen kulcs kapcsolatok -->
-    <xs:keyref name="dolgozoLakhelyRef" refer="varosKulcs">
-        <xs:selector xpath="dolgozok/dolgozo/lakhely"/>
-        <xs:field xpath="@iranyitoszam"/>
-    </xs:keyref>
-
-    <xs:keyref name="menhelyVarosRef" refer="varosKulcs">
-        <xs:selector xpath="menhelyek/menhely/cim"/>
-        <xs:field xpath="@iranyitoszam"/>
-    </xs:keyref>
-
-    <xs:keyref name="orokbefogadoLakhelyRef" refer="varosKulcs">
-        <xs:selector xpath="orokbefogadok/orokbefogado/lakhely"/>
-        <xs:field xpath="@iranyitoszam"/>
-    </xs:keyref>
 </xs:schema>

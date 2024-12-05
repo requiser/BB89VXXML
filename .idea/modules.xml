@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BB89VX_1015/3. feladat/3. feladat.iml" filepath="$PROJECT_DIR$/BB89VX_1015/3. feladat/3. feladat.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/BB89VXXML.iml" filepath="$PROJECT_DIR$/.idea/BB89VXXML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XMLTaskBB89VX/DOMParseBB89VX/DOMParseBB89VX.iml" filepath="$PROJECT_DIR$/XMLTaskBB89VX/DOMParseBB89VX/DOMParseBB89VX.iml" />
       <module fileurl="file://$PROJECT_DIR$/BB89VX_1105/DomModifyBB89VX/DomModifyBB89VX.iml" filepath="$PROJECT_DIR$/BB89VX_1105/DomModifyBB89VX/DomModifyBB89VX.iml" />
       <module fileurl="file://$PROJECT_DIR$/BB89VX_1022/DomParseBB89VX/DomParseBB89VX.iml" filepath="$PROJECT_DIR$/BB89VX_1022/DomParseBB89VX/DomParseBB89VX.iml" />
       <module fileurl="file://$PROJECT_DIR$/BB89VX_1105/DomQueryBB89VX/DomQueryBB89VX.iml" filepath="$PROJECT_DIR$/BB89VX_1105/DomQueryBB89VX/DomQueryBB89VX.iml" />

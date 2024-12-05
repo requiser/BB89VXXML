@@ -17,7 +17,7 @@ public class DOMWriteBB89VX {
             DocumentBuilder builder = factory.newDocumentBuilder();
 
             // XML fájl beolvasása
-            Document doc = builder.parse("XMLBB89VX.xml");
+            Document doc = builder.parse("XMLTaskBB89VX/XMLBB89VX.xml");
             removeWhitespace(doc.getDocumentElement());
 
             // XML struktúra normalizálása
@@ -86,7 +86,7 @@ public class DOMWriteBB89VX {
             DOMSource source = new DOMSource(doc);
 
             // Kimenet StreamResult-ba
-            StreamResult fileResult = new StreamResult(new File("XMLBB89VX1.xml"));
+            StreamResult fileResult = new StreamResult(new File("XMLTaskBB89VX/XMLBB89VX1.xml"));
 
             // A dokumentum transzformálása
             transformer.transform(source, fileResult);
