@@ -137,20 +137,20 @@
     <orokbefogado szemelyi_szam="876543CD">
       <nev>Kovács Anna</nev>
       <szul_ido>1999.09.09.</szul_ido>
-	  <telefonszam>06201234568</telefonszam>
-	  <lakhely iranyitoszam="4001">
-		  <utca>Tavasz utca</utca>
-		  <hazszam>8</hazszam>
-	  </lakhely>
-	</orokbefogado>
-	<orokbefogado szemelyi_szam="876543EF">
-		<nev>Horváth Eszter</nev>
-		<szul_ido>1990.12.01.</szul_ido>
-		<telefonszam>06201234569</telefonszam>
-		<lakhely iranyitoszam="3300">
-			<utca>Nyár utca</utca>
-			<hazszam>13</hazszam>
-		</lakhely>
-	</orokbefogado>
+      <telefonszam>06201234568</telefonszam>
+      <lakhely iranyitoszam="4001">
+        <utca>Tavasz utca</utca>
+        <hazszam>8</hazszam>
+      </lakhely>
+    </orokbefogado>
+    <orokbefogado szemelyi_szam="876543EF">
+      <nev>Horváth Eszter</nev>
+      <szul_ido>1990.12.01.</szul_ido>
+      <telefonszam>06201234569</telefonszam>
+      <lakhely iranyitoszam="3300">
+        <utca>Nyár utca</utca>
+        <hazszam>13</hazszam>
+      </lakhely>
+    </orokbefogado>
   </orokbefogadok>
 </allatmenhelyek>

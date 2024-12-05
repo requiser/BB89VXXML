@@ -15,7 +15,7 @@ public class DOMReadBB89VX {
             DocumentBuilder builder = factory.newDocumentBuilder();
 
             // XML fájl beolvasása
-            Document doc = builder.parse("XMLBB89VX.xml");
+            Document doc = builder.parse("XMLTaskBB89VX/XMLBB89VX.xml");
             removeWhitespace(doc.getDocumentElement());
 
             // XML struktúra normalizálása
@@ -135,7 +135,7 @@ public class DOMReadBB89VX {
             transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
 
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("XMLBB89VXRead.xml"));
+            StreamResult result = new StreamResult(new File("XMLTaskBB89VX/XMLBB89VXRead.xml"));
             transformer.transform(source, result);
 
             System.out.println("\nAz XML fájl mentése sikeres: XMLBB89VXRead.xml");

@@ -15,7 +15,7 @@ public class DOMModifyBB89VX {
             DocumentBuilder builder = factory.newDocumentBuilder();
 
             // XML fájl beolvasása
-            Document doc = builder.parse("XMLBB89VX.xml");
+            Document doc = builder.parse("XMLTaskBB89VX/XMLBB89VX.xml");
             removeWhitespace(doc.getDocumentElement());
 
             // XML struktúra normalizálása
@@ -71,7 +71,7 @@ public class DOMModifyBB89VX {
                                  " új férőhelye: " + ujFerohely);
             }
 
-            // 4. Módosítás: Betegségek gyógyulási idejének módosítása és súlyosság attribútum hozzáadása
+            // 4. Módosítás: Betegségek súlyosságának megállapítása és attribútum hozzáadása
             System.out.println("\n4. Módosítás: Betegségek súlyosságának megjelölése");
             System.out.println("--------------------------------------------------");
             NodeList betegsegek = doc.getElementsByTagName("betegseg");
@@ -103,7 +103,7 @@ public class DOMModifyBB89VX {
             transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
 
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("XMLBB89VXModify.xml"));
+            StreamResult result = new StreamResult(new File("XMLTaskBB89VX/XMLBB89VXModify.xml"));
             transformer.transform(source, result);
 
             System.out.println("\nA módosított XML fájl mentése sikeres!");
