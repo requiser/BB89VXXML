@@ -10,20 +10,15 @@ import java.io.*;
 public class DOMReadBB89VX {
     public static void main(String[] args) {
         try {
-            // DocumentBuilder létrehozása
+            // XML beolvasása
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-
-            // XML fájl beolvasása
-            Document doc = builder.parse("XMLTaskBB89VX/XMLBB89VX.xml");
-            removeWhitespace(doc.getDocumentElement());
-
-            // XML struktúra normalizálása
+            Document doc = builder.parse("XMLBB89VX.xml");
             doc.getDocumentElement().normalize();
 
-            // Adatok kiírása blokkonként
+            // Adatok kiírása
 
-            // 1. Blokk: Városok
+            // Városok
             System.out.println("VÁROSOK ADATAI:");
             System.out.println("===============");
             NodeList varosok = doc.getElementsByTagName("varos");
@@ -41,7 +36,7 @@ public class DOMReadBB89VX {
                 System.out.println("--------------------");
             }
 
-            // 2. Blokk: Dolgozók
+            // Dolgozók
             System.out.println("\nDOLGOZÓK ADATAI:");
             System.out.println("================");
             NodeList dolgozok = doc.getElementsByTagName("dolgozo");
@@ -61,7 +56,7 @@ public class DOMReadBB89VX {
                 System.out.println("--------------------");
             }
 
-            // 3. Blokk: Állatok
+            // Állatok
             System.out.println("\nÁLLATOK ADATAI:");
             System.out.println("===============");
             NodeList allatok = doc.getElementsByTagName("allat");
@@ -75,7 +70,7 @@ public class DOMReadBB89VX {
                 System.out.println("--------------------");
             }
 
-            // 4. Blokk: Menhelyek
+            // Menhelyek
             System.out.println("\nMENHELYEK ADATAI:");
             System.out.println("=================");
             NodeList menhelyek = doc.getElementsByTagName("menhely");
@@ -93,7 +88,7 @@ public class DOMReadBB89VX {
                 System.out.println("--------------------");
             }
 
-            // 5. Blokk: Betegségek
+            // Betegségek
             System.out.println("\nBETEGSÉGEK ADATAI:");
             System.out.println("=================");
             NodeList betegsegek = doc.getElementsByTagName("betegseg");
@@ -108,7 +103,7 @@ public class DOMReadBB89VX {
                 System.out.println("--------------------");
             }
 
-            // 6. Blokk: Örökbefogadók
+            // Örökbefogadók
             System.out.println("\nÖRÖKBEFOGADÓK ADATAI:");
             System.out.println("=====================");
             NodeList orokbefogadok = doc.getElementsByTagName("orokbefogado");
@@ -126,40 +121,15 @@ public class DOMReadBB89VX {
                 System.out.println("--------------------");
             }
 
-            // XML mentése fájlba
+            // XML fájlba mentése
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
-
-            // Kimenet formázási beállítások
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("XMLTaskBB89VX/XMLBB89VXRead.xml"));
+            StreamResult result = new StreamResult(new File("XMLBB89VX_read.xml"));
             transformer.transform(source, result);
-
-            System.out.println("\nAz XML fájl mentése sikeres: XMLBB89VXRead.xml");
 
         } catch (Exception e) {
             e.printStackTrace();
-        }
-    }
-
-    // Fölösleges üres sorok eltávolítása
-    private static void removeWhitespace(Node node) {
-        NodeList children = node.getChildNodes();
-        for (int i = children.getLength() - 1; i >= 0; i--) {
-            Node child = children.item(i);
-            if (child.getNodeType() == Node.TEXT_NODE) {
-                String trim = child.getTextContent().trim();
-                if (trim.isEmpty()) {
-                    node.removeChild(child);
-                } else {
-                    ((Text) child).setData(trim);
-                }
-            } else if (child.getNodeType() == Node.ELEMENT_NODE) {
-                removeWhitespace(child);
-            }
         }
     }
 }

@@ -10,26 +10,20 @@ import java.io.*;
 public class DOMModifyBB89VX {
     public static void main(String[] args) {
         try {
-            // DocumentBuilder létrehozása
+            // XML beolvasása
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-
-            // XML fájl beolvasása
-            Document doc = builder.parse("XMLTaskBB89VX/XMLBB89VX.xml");
+            Document doc = builder.parse("XMLBB89VX.xml");
             removeWhitespace(doc.getDocumentElement());
-
-            // XML struktúra normalizálása
             doc.getDocumentElement().normalize();
 
-            // 1. Módosítás: Minden dolgozó fizetésének hozzáadása (új elem beszúrása)
+            // 1. Minden dolgozó fizetésének hozzáadása (új elem beszúrása)
             System.out.println("1. Módosítás: Dolgozói fizetések hozzáadása");
             System.out.println("--------------------------------------------");
             NodeList dolgozok = doc.getElementsByTagName("dolgozo");
             for (int i = 0; i < dolgozok.getLength(); i++) {
                 Element dolgozo = (Element) dolgozok.item(i);
                 Element fizetes = doc.createElement("fizetes");
-
-                // Beosztás alapján állítjuk be a fizetést
                 String beosztas = dolgozo.getElementsByTagName("beosztas").item(0).getTextContent();
                 if (beosztas.equals("Állatorvos")) {
                     fizetes.setTextContent("450000");
@@ -44,7 +38,7 @@ public class DOMModifyBB89VX {
                                  " fizetése: " + fizetes.getTextContent() + " Ft");
             }
 
-            // 2. Módosítás: Állatok életkorának növelése 1 évvel
+            // 2. Állatok életkorának növelése 1 évvel
             System.out.println("\n2. Módosítás: Állatok életkorának növelése");
             System.out.println("------------------------------------------");
             NodeList allatok = doc.getElementsByTagName("allat");
@@ -58,7 +52,7 @@ public class DOMModifyBB89VX {
                                  " új életkora: " + kor + " év");
             }
 
-            // 3. Módosítás: Menhelyek férőhelyének bővítése 10%-kal
+            // 3. Menhelyek férőhelyének bővítése 10%-kal
             System.out.println("\n3. Módosítás: Menhelyek férőhelyének bővítése");
             System.out.println("----------------------------------------------");
             NodeList menhelyek = doc.getElementsByTagName("menhely");
@@ -71,7 +65,7 @@ public class DOMModifyBB89VX {
                                  " új férőhelye: " + ujFerohely);
             }
 
-            // 4. Módosítás: Betegségek súlyosságának megállapítása és attribútum hozzáadása
+            // 4. Betegségek súlyosságának megállapítása és attribútum hozzáadása
             System.out.println("\n4. Módosítás: Betegségek súlyosságának megjelölése");
             System.out.println("--------------------------------------------------");
             NodeList betegsegek = doc.getElementsByTagName("betegseg");
@@ -81,7 +75,6 @@ public class DOMModifyBB89VX {
                     betegseg.getElementsByTagName("gyogyulasi_ido").item(0).getTextContent()
                 );
 
-                // Súlyosság megállapítása és attribútum hozzáadása
                 String sulyossag;
                 if (gyogyulasiIdo > 14) {
                     sulyossag = "súlyos";
@@ -96,14 +89,14 @@ public class DOMModifyBB89VX {
                                  " súlyossága: " + sulyossag);
             }
 
-            // Módosított XML mentése új fájlba
+            // XML fájlba mentése
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
 
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("XMLTaskBB89VX/XMLBB89VXModify.xml"));
+            StreamResult result = new StreamResult(new File("XMLBB89VX_modify.xml"));
             transformer.transform(source, result);
 
             System.out.println("\nA módosított XML fájl mentése sikeres!");
