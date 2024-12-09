@@ -8,25 +8,20 @@ import java.util.Objects;
 public class DOMQueryBB89VX {
     public static void main(String[] args) {
         try {
-            // DocumentBuilder létrehozása
+            // XML beolvasása
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-
-            // XML fájl beolvasása
             Document doc = builder.parse("XMLTaskBB89VX/XMLBB89VX.xml");
-
-            // XML struktúra normalizálása
             doc.getDocumentElement().normalize();
 
-            // 1. Lekérdezés: Miskolcon élő dolgozók listázása
-            System.out.println("1. Miskolcon élő dolgozók:");
-            System.out.println("---------------------------");
-
-            NodeList varosok = doc.getElementsByTagName("varos");
+            // 1. Miskolcon lakó dolgozók
             String keresettvaros = "Miskolc";
-            String keresettirszam = "";
+            System.out.println("1. " + keresettvaros + "-i dolgozók:");
+            System.out.println("---------------------------");
+            NodeList varosok = doc.getElementsByTagName("varos");
 
             // Keresett város irányítószámának megkeresése
+            String keresettirszam = "";
             for (int i = 0; i < varosok.getLength(); i++) {
                 Element varos = (Element) varosok.item(i);
                 Node nevNode = varos.getElementsByTagName("nev").item(0);
@@ -36,6 +31,7 @@ public class DOMQueryBB89VX {
                 }
             }
 
+            // Irányítószám alapján való dolgozók keresése
             if (!keresettirszam.isEmpty()) {
                 NodeList dolgozok = doc.getElementsByTagName("dolgozo");
 
@@ -64,7 +60,7 @@ public class DOMQueryBB89VX {
             }
 
 
-            // 2. Lekérdezés: 300 férőhelynél nagyobb menhelyek
+            // 2. 300 férőhelynél nagyobb menhelyek
             System.out.println("\n2. 300 férőhelynél nagyobb menhelyek:");
             System.out.println("------------------------------------");
             NodeList menhelyek = doc.getElementsByTagName("menhely");
@@ -77,7 +73,7 @@ public class DOMQueryBB89VX {
                 }
             }
 
-            // 3. Lekérdezés: 3 évnél idősebb állatok
+            // 3. 3 évnél idősebb állatok
             System.out.println("\n3. 3 évnél idősebb állatok:");
             System.out.println("--------------------------");
             NodeList allatok = doc.getElementsByTagName("allat");
@@ -93,7 +89,7 @@ public class DOMQueryBB89VX {
                 }
             }
 
-            // 4. Lekérdezés: 10 napnál hosszabb gyógyulási idejű betegségek
+            // 4. 10 napnál hosszabb gyógyulási idejű betegségek
             System.out.println("\n4. 10 napnál hosszabb gyógyulási idejű betegségek:");
             System.out.println("-----------------------------------------------");
             NodeList betegsegek = doc.getElementsByTagName("betegseg");
