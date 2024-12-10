@@ -108,7 +108,7 @@
                         <xs:element name="nem" type="NemTipus"/>
                         <xs:element name="edesanyja_leanykori_neve" type="xs:string"/>
                         <xs:element name="lakhely" type="CimTipus"/>
-                        <xs:element name="telefonszam" type="TelefonszamTipus"/>
+                        <xs:element name="telefonszam" type="TelefonszamTipus" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:sequence>
                     <xs:attribute name="szemelyi_szam" type="xs:string" use="required"/>
                 </xs:complexType>
@@ -150,7 +150,7 @@
                     <xs:sequence>
                         <xs:element name="nev" type="xs:string"/>
                         <xs:element name="ferohely" type="xs:positiveInteger"/>
-                        <xs:element name="telefonszam" type="TelefonszamTipus"/>
+                        <xs:element name="telefonszam" type="TelefonszamTipus" minOccurs="0" maxOccurs="unbounded"/>
                         <xs:element name="cim" type="CimTipus"/>
                     </xs:sequence>
                     <xs:attribute name="nyilvantartasi_azonosito" type="xs:string" use="required"/>
@@ -198,7 +198,7 @@
                     <xs:sequence>
                         <xs:element name="nev" type="xs:string"/>
                         <xs:element name="szul_ido" type="xs:string"/>
-                        <xs:element name="telefonszam" type="TelefonszamTipus"/>
+                        <xs:element name="telefonszam" type="TelefonszamTipus" minOccurs="0" maxOccurs="unbounded"/>
                         <xs:element name="lakhely" type="CimTipus"/>
                     </xs:sequence>
                     <xs:attribute name="szemelyi_szam" type="xs:string" use="required"/>

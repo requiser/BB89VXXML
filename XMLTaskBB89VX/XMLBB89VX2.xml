@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<allatmenhelyek xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaBB89VX.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><allatmenhelyek xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaBB89VX.xsd">
   <varosok>
     <varos iranyitoszam="4000">
       <nev>Debrecen</nev>
@@ -28,7 +27,6 @@
         <hazszam>11</hazszam>
       </lakhely>
       <telefonszam>06301234567</telefonszam>
-      <telefonszam>06701234567</telefonszam>
     </dolgozo>
     <dolgozo szemelyi_szam="234567RR">
       <beosztas>Állatorvos</beosztas>
@@ -39,6 +37,7 @@
         <utca>Petőfi utca</utca>
         <hazszam>12</hazszam>
       </lakhely>
+      <telefonszam>06701234567</telefonszam>
     </dolgozo>
     <dolgozo szemelyi_szam="345678TT">
       <beosztas>Menedzser</beosztas>
@@ -83,7 +82,6 @@
       <nev>Ebrendészeti Telep</nev>
       <ferohely>400</ferohely>
       <telefonszam>06701234502</telefonszam>
-      <telefonszam>06301234502</telefonszam>
       <cim iranyitoszam="4002">
         <utca>Bánk</utca>
         <hazszam>72</hazszam>
@@ -130,7 +128,6 @@
       <nev>Horváth János</nev>
       <szul_ido>1992.11.02.</szul_ido>
       <telefonszam>06201234567</telefonszam>
-      <telefonszam>06301234567</telefonszam>
       <lakhely iranyitoszam="3515">
         <utca>Béke utca</utca>
         <hazszam>5</hazszam>
